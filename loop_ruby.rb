@@ -3,7 +3,7 @@ require 'watir' # Crawler
 require 'pry' # Ruby REPL
 require 'rb-readline' # Ruby IRB
 require 'awesome_print' # Console output
-
+require 'remove_emoji'
 
 
 # Open Browser, Navigate to Login page
@@ -52,4 +52,12 @@ require 'awesome_print' # Console output
   system("ruby", "parse_info.rb") 
 
   # Read file an then put it into a array every two lines
+    File.readlines('outputD.xls')
 
+    a = IO.readlines("outputD.xls")
+    a[0]   #=> "This is line one\n
+
+    a.each do |x|
+    x = puts RemoveEmoji::Sanitize.call("#{x}")
+    print x
+    end

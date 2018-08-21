@@ -1,9 +1,9 @@
-require 'selenium'
-require 'watir' # Crawler
-require 'pry' # Ruby REPL
-require 'rb-readline' # Ruby IRB
-require 'awesome_print' # Console output
-
+require_relative 'selenium'
+require_relative 'watir' # Crawler
+require_relative 'pry' # Ruby REPL
+require_relative 'rb-readline' # Ruby IRB
+require_relative 'awesome_print' # Console output
+require_relative 'remove_emoji'
 
 
 # Open Browser, Navigate to Login page

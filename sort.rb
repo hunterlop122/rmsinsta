@@ -1,3 +1,4 @@
+require 'remove_emoji'
 File.readlines('outputD.xls')
 
 a = IO.readlines("outputD.xls")
@@ -12,5 +13,11 @@ class Array
 end
 
 b = a.except names
- 
-print 
+
+
+a.each do |x|
+    x = puts RemoveEmoji::Sanitize.call("#{x}")
+    print x
+end
+
+
